@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+   
+    <div class="main">
+
+        <div class="main-text">
+            <h1>
+                <p>Hi, I'am</p>
+                <p class="nome class-animation">Pedro Pontes</p>
+                <p class="sub">Front-end Developer</p>
+            </h1>
+        </div>
+
+       
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+             <div class="swiper-slide">
+                <img src="ft2.jpeg">
+                <div class="info">
+                    <h3>ABOUT ME</h3>
+                    <h4 class="subtl">Sobre mim</h4>
+                </div>
+                <div class="card-description">
+                <h4 class="aboutme"> Olá, meu nome é Pedro e sou 
+                Desenvolvedor Front-end e moro em São Paulo atualmente. Possuo perfil empreendedor e já fundei algumas startups por aí...</h4>
+                </div>
+            </div>
+                
+              <div class="swiper-slide">
+                <img src="images.png">
+                <div class="info">
+                    <h3>SKILLS</h3>
+                    <h4 class="subtl">Habilidades</h4>
+                </div>
+                <div class="card-description">
+                    <h4 class="aboutme">&#10004 Html | CSS</h4>
+                    <h4 class="aboutme">&#10004 JavaScript</h4>
+                    <h4 class="aboutme">&#10004 ReactJS | NodeJS</h4>
+                    <h4 class="aboutme">&#10004 Figma | Adobe XD</h4>
+                    <h4 class="aboutme">&#10004 UI/UX Design</h4>
+                    </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="team001.png">
+                <div class="info">
+                    <h3>SOFT SKILLS</h3>
+                    <h4 class="subtl">Hab. interpessoais</h4>
+                </div>
+                <div class="card-description">
+                    <h4 class="aboutme">&#10004 Autogerenciamento</h4>
+                    <h4 class="aboutme">&#10004 Liderança</h4>
+                    <h4 class="aboutme">&#10004 Criatividade</h4>
+                    <h4 class="aboutme">&#10004 Trabalho em equipe</h4>
+                    <h4 class="aboutme">&#10004 Visão sistêmica</h4>
+                    </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="chess3.jpg">
+                <div class="info">
+                    <h3>HOBBY</h3>
+                    <h4 class="subtl">Passatempo</h4>
+                </div>
+                <div class="card-description">
+                    <h4>&#127944 Adoro esportes</h4>
+                    <h4>&#127929 Sou músico</h4>
+                    <h4>🍽 Curto cozinhar (e comer é claro)</h4>
+                    <h4>&#127947 Exercícios físicos</h4>
+                    <h4>♞ Jogo xadrez há mais de 15 anos</h4>
+                    
+                    </div>
+            </div>
+              
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div> <!--DIV MAIN FINAL-->
+
+          <footer>
+            <h2>Contacts</h2>
+            <h4>Contatos</h4>
+          
+          <div class="buttons">
+            <ul class="prim">
+                <li class="but1">
+                    <a href="https://www.instagram.com/pedropdsouza/">
+                    <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="seg">
+                <li class="but2">
+                    <a href="https://api.whatsapp.com/send?phone=5511952502016"></a>
+                    <i class="fa fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="terc">
+                <li class="but3">
+                    <a href="mailto:pedropontesdesouza@gmail.com"></a>
+                    <i class="fa fa-envelope"></i>
+                </a>
+                </li>
+            </ul>
+            <ul class="quart">
+                <li class="but4">
+                    <a href="mailto:pedropontesdesouza@gmail.com"></a>
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                </li>
+            </ul>
+          </div>
+          </footer>
+
+       
+          
+    
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          centeredSlides: true,
+          grabCursor: true,
+          slidesPerGroup: 1,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          
+        });
+      </script>
+
+</body>
+</html>
