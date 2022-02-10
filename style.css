@@ -16,32 +16,64 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
     display: grid;
-
-    row-gap: 200px;
     
     grid-template-areas: 
     "main-text" "mySwiper"
     "footer" "footer";
 }
 
-@media (max-width: 1000px) {
-    .main {
-        
-        grid-template-areas: 
-        "main-text"
-        "mySwiper"
-        "footer";
-    }
+@media (max-width: 960px) {
+  .main {
+    
+    grid-template-areas: 
+    "main-text" 
+    "mySwiper"
+    "footer";   
+  }
+
+  .main-text .class-animation {
+    font-size: 85%;
+  }
+
+  .mySwiper {
+    margin-top: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+
+  .footer .title-footer{
+    margin-top: 150px;
+    width: 400px;
+  }
+
+  .footer h2 {
+    font-size: 35px;
+  }
+
+  .footer h4 {
+    font-size: 25px;
+  }
+  
+  .footer .buttons{
+    margin: auto;
+    margin-left: 1%;
+    width: 90%;
+    align-items: center;
+  }
+
+  
+
 }
 
 .main-text {
     position: relative;
     left: 5%;
-    margin-top: 12%;
+    margin-top: 5%;
     grid-area: "main-text";
-    grid-row: main-text;
     max-width: 200px;
     min-width: 200px;
 
@@ -206,21 +238,27 @@ letter-spacing: .1px;
 
 /*BOTÕES REDES SOCIAIS*/
 
-footer {
- width: auto;
- position: relative;
- height: 180px;
- margin-top: 130px;
- align-items: center;
+.footer {
+ width: 100%;
  grid-area: "footer";
- grid-column: footer;
+ margin: auto;
+ margin-top: 350px;
+ justify-content: center;
+ align-items: center;
  
 }
 
 .buttons {
-  position: relative;
-  left: 10%;
-  
+  width: 1200px;
+  height: 170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title-footer {
+  margin: 0 auto;
 }
 
 h2 {
@@ -235,203 +273,162 @@ h4 {
 }
 
 h2, h4{
-position: relative;
-text-align: center;
-bottom: 45%;
+  position: relative;
+  text-align: center;
 }
 
-.prim {
-  position: absolute;
-  top: 80%;
-  left: 11%;
+.prim .seg .terc .quart {
   transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  
  }
 
-.seg {
-  position: absolute;
-  top: 80%;
-  left: 31%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  display: flex;
- }
-
-.terc {
-  position: absolute;
-  top: 80%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  display: flex;
- }
-
-.quart {
-  position: absolute;
-  top: 80%;
-  left: 71%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  display: flex;
- }
-
-
- .prim .but1, .seg .but2,  .terc .but3, .quart .but4{
+.prim .but1, .seg .but2,  .terc .but3, .quart .but4{
   list-style: none;
   margin: auto;
   align-items: center;
   cursor: pointer;
- 
+}
+
+.prim .but1, .seg .but2,  
+.terc .but3, .quart .but4, .fa{
+  position: absolute;
+  font-size: 35px;
+  color: #262626;
+  line-height: 80px;
+  transition: .5s;
+  margin: -13px -10px -10px -15px;
+  text-decoration: none;
+
+}
+
+.prim .but1, .seg .but2,  .terc .but3, .quart .but4{
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  text-align: center;
+  transform: perspective(100px) rotate(-25deg) skew(25deg) translate(0,0);
+  transition: .5s;
+  box-shadow: -20px 20px 20px rgb(0,0,0,0.5);
   
-  }
-  .prim .but1, .seg .but2,  
-  .terc .but3, .quart .but4, .fa{
-      position: absolute;
-      font-size: 35px;
-      color: #262626;
-      line-height: 80px;
-      transition: .5s;
-      margin: -13px -10px -10px -15px;
-      text-decoration: none;
-      
-     }
-
-    .prim .but1, .seg .but2,  .terc .but3, .quart .but4{
-      position: absolute;
-      display: block;
-      width: 50px;
-      height: 50px;
-      background: #fff;
-      text-align: center;
-      transform: perspective(100px) rotate(-25deg) skew(25deg) translate(0,0);
-         transition: .5s;
-         box-shadow: -20px 20px 20px rgb(0,0,0,0.5);
-         
-     }
-
-         
-     
-     
-
-     /* PRIMEIRA CAIXA*/
-     
-     .prim .but1 .seg .but2  .terc .but3 .quart .but4, footer a::before{
-      content: '';
-      position: absolute;
-      top: 10px; 
-      left: -20px;  
-      height: 100%; 
-      width: 20px;
-      background: #b1b1b1;
-      transition: .5s;
-      transform: rotate(0deg) skewY(-45deg);
-     }
-     
-     .prim .but1 .seg .but2 .terc .but3 .quart .but4, footer a::after{
-      content: '';
-      position: absolute;
-      top: 50px;
-      left: -10px;
-      height: 20px;
-      width: 100%;
-      background: #b1b1b1;
-      transform: rotate(0deg) skewX(-45deg);
-     }
-
-
-
-
-     .prim .but1:hover{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-      box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-     }
-
-     .prim:hover .fa{
-      color: #fff;
-     }
-
-     .prim:hover .but1{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-         box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-         background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
-
-    }
-
-    .prim:hover .but1:before{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-         box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-         background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
-
-    }
-    .prim:hover .but1:after{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-         box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-         background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
-
-    }
-
-
-
-    .seg .but2:hover{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-      box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-     }
-
-     .seg:hover .fa{
-      color: #fff;
-     }
-
-     .seg:hover .but2{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-         box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-         background: #25d366;
-
-    }
+}
 
   
 
 
 
-    .terc .but3:hover{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-      box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-     }
+/* PRIMEIRA CAIXA*/
 
-     .terc:hover .fa{
-      color: #fff;
-     }
+.prim .but1 .seg .but2  .terc .but3 .quart .but4, .footer a::before{
+  content: '';
+  position: absolute;
+  top: 10px; 
+  left: -20px;  
+  height: 100%; 
+  width: 20px;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
 
-     .terc:hover .but3{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-         box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-         background:#e83322;
-
-    }
-
-   
-
-
-    .quart .but4:hover{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-      box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-     }
-
-     .quart:hover .fa{
-      color: #fff;
-     }
-
-     .quart:hover .but4{
-      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-         box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
-         background:#0e76a8;
-
-    }
+.prim .but1 .seg .but2 .terc .but3 .quart .but4, .footer a::after{
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewX(-45deg);
+}
 
 
-    
+
+
+.prim .but1:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+}
+
+.prim:hover .fa{
+  color: #fff;
+}
+
+.prim:hover .but1{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
+
+}
+
+.prim:hover .but1:before{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
+
+}
+.prim:hover .but1:after{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg,#d047d1, #ff0000,#ffff00);
+
+}
+
+
+
+.seg .but2:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+}
+
+.seg:hover .fa{
+  color: #fff;
+}
+
+.seg:hover .but2{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+  background: #25d366;
+
+}
+
+
+
+
+
+.terc .but3:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+}
+
+.terc:hover .fa{
+  color: #fff;
+}
+
+.terc:hover .but3{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+  background:#e83322;
+
+}
+
+
+
+
+.quart .but4:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+}
+
+.quart:hover .fa{
+  color: #fff;
+}
+
+.quart:hover .but4{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0,0,0,0.5);
+  background:#0e76a8;
+
+}
+
+
